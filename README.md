@@ -9,4 +9,7 @@
 * magic8.py
 
 ## WAV Files
+
+Files go into "m8/" directory
+
 asyes.wav  cannot.wav  count.wav  doubtful.wav  hazy.wav  outlook.wav  sources.wav  yesdef.wav
