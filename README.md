@@ -8,7 +8,7 @@
 ## Magic 8 Ball for NeoTrinkey
 * magic8.py
 
-## WAV Files
+## WAV Files for CircuitPython CircuitPlayground version
 
 Files go into "m8/" directory
 
