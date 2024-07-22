@@ -2,11 +2,11 @@ input.onSwitchMoved(SwitchDirection.Right, function () {
     light.showAnimation(light.rainbowAnimation, 500)
     light.setAll(0x000000)
 })
-function cleartally () {
+function cleartally() {
     bad = 0
     good = 0
 }
-function magic8 () {
+function magic8() {
     light.showAnimation(light.rainbowAnimation, 500)
     light.setAll(0x000000)
     ans = Math.randomRange(0, 7)
@@ -14,7 +14,7 @@ function magic8 () {
     pause(2000)
     light.setAll(0x000000)
 }
-function magic8text () {
+function magic8text() {
     light.showAnimation(light.rainbowAnimation, 500)
     light.setAll(0x000000)
     ans = Math.randomRange(0, 7)
@@ -29,6 +29,21 @@ input.onSwitchMoved(SwitchDirection.Left, function () {
     cleartally()
     g = 0
     b = 0
+    savans = 0
+})
+input.touchA7.onEvent(ButtonEvent.Click, function () {
+    if (!(input.switchRight()) && savans != 0) {
+        light.showAnimation(light.rainbowAnimation, 500)
+        if (2 == savans) {
+            light.setAll(0xffff00)
+        } else if (3 == savans) {
+            light.setAll(0xff0000)
+        } else {
+            light.setAll(0x00ff00)
+        }
+    }
+    pause(2000)
+    light.setAll(0x000000)
 })
 input.buttonB.onEvent(ButtonEvent.Click, function () {
     if (!(input.switchRight())) {
@@ -71,16 +86,20 @@ input.touchA2.onEvent(ButtonEvent.Click, function () {
     if (!(input.switchRight())) {
         if (good == bad) {
             light.setAll(0xffff00)
+            savans = 2
         } else if (good > bad) {
             light.setAll(0x00ff00)
+            savans = 1
         } else {
             light.setAll(0xff0000)
+            savans = 3
         }
     }
     pause(2000)
     light.setAll(0x000000)
     cleartally()
 })
+let savans = 0
 let b = 0
 let g = 0
 let ans = 0
