@@ -1,7 +1,7 @@
 # DecisionMaker
 ## Magic 8 ball / decision calculator for CircuitPlayground
 
-* DecisionMaker.js - MakeCode version of DecisionMaker
+* DecisionMaker.js - MakeCode version of DecisionMaker - note, in MakeCode, requires adding Extension for Keyboard input.
 
 * DecisionMaker.py - CircuitPython version of DecisionMaker
 
